@@ -1,0 +1,32 @@
+Git command
+-git init 		=> git instantiate folder creat (hidden)
+-git status	=> update ကြည့်တာ
+-git add .		=> update ပေါင်းထည့်(.) အားလုံး (name) ရေးလဲရတယ်
+-git commit -m "name" => name တစ်ခုနဲ့ commit သိမ်းတာ
+-git log		=> commit တွေပြန်ကြည့်တာ
+-git clear -f	=> file ကိုဖျက်တာ
+-git clear -fd	=> directory ကိုဖျက်တာ
+-git checkout "ac5a" => commit ကရှေ့(၄)လုံးကိုထည့်ပြီး အရှေ့ကိုပြန်သွား
+-git checkout master => မူလအတိုင်းပြန်ထည့်
+-git branch	=> branch တွေ့ကြည့်တာ
+-git branch name	=> branch create
+-git checkout "branch name" => branch change
+-git branch -M main => master branch ကို main branch ပြောင်းတာ 
+-git config --global user.name "name"
+-git config --global user.email "email"
+-git remote add origin git@github.com:KyawBoLin/first-git-project.git => git account ထဲက project 
+ကိုညွှန်းတာ
+-git push -u origin main	=> code တွေ git ပေါ်တင်တာ "branch name" ပဲဖြစ်ရမယ်
+-git remote -v	=> git ကိုဘာနဲ့ချိတ်ထားလဲ check တာ
+-ssh-keygen	=> press 3 times enter
+-cat .ssh/id-rsa.pub => ssh key ရပြီ
+-git clone "name.git" => clone ဆွဲတာ
+-git pull origin dev => online ကနေ offline ကို pull ဆွဲတာ
+-git branch -D dev => dev branch ကိုဖျက်လိုက်တာ
+-git fetch origin	=> online နဲ့ offline ကိုတူအောင်လုပ်လိုက်တာ branch မရှိရင်တောင် online မှာရှိရင်ရတယ် "code review" လုပ်တဲ့အခါသုံးတယ်
+-code . => VS code open
+-git checkout -b "name"	=> branch ဖွင့်တယ် တန်းပါရောက်တယ် အဲ့ branch ကို
+-git log --oneline -n3	=> commit (၃) ကြောင်းပဲပြတယ်
+-git reset	 --hard "3948292"	=> commit တွေပြန်ဖျက်တာ
+
+File တစ်ခုတည်းကို dev 2ယောက်ပေါင်းရေးရင် git မှာ ပေါင်းတဲ့ အခါ conflict ဖြစ်တတ်တယ်
