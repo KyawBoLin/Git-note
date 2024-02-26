@@ -30,3 +30,101 @@ Git command
 -git reset	 --hard "3948292"	=> commit တွေပြန်ဖျက်တာ
 
 File တစ်ခုတည်းကို dev 2ယောက်ပေါင်းရေးရင် git မှာ ပေါင်းတဲ့ အခါ conflict ဖြစ်တတ်တယ်
+
+-git --version				=> version
+-git init 					=> git instantiate folder creat (hidden)
+-git status				=> update ကြည့်တာ
+-git add .					=> update ပေါင်းထည့်(.) အားလုံး (name) ရေးလဲရတယ်
+-git commit -m "name"			 => name တစ်ခုနဲ့ commit သိမ်းတာ
+-git commit -am "name"			=> git add and git commit ကိုတခါတည်းလုပ်လိုက်တာ
+-git commit -m "name" --amend		=> ရှိပြီးသား commit ထဲကို modify လုပ်ထားတဲ့ data တွေကို ထပ်ထည့်လိုက်တာ
+-git log,
+-git log --oneline				=> commit တွေပြန်ကြည့်တာ
+-git log --all				=> you can see all commits where you are anywhere.
+-git log --all --graph			=> branch preview
+-git clear -f				=> file ကိုဖျက်တာ
+-git clear -fd				=> directory ကိုဖျက်တာ
+-git checkout "ac5a" 			=> commit ကရှေ့(7)လုံးကိုထည့်ပြီး အရှေ့ကိုပြန်သွား
+-git checkout "ac5a" filename		=> goes to "ac5a" commit and restore data from only "filename"
+-git checkout master 			=> မူလအတိုင်းပြန်ထည့်
+
+branch ဆိုတာ နောက်ဆုံး commit ကိုညွှန်းတာ (pointer) commit ရှိမှ branch ရှိမယ်
+
+-git branch				=> branch တွေ့ကြည့်တာ
+-git branch name				=> branch create
+-git checkout "branch name",
+-git switch -c branchName	 		=> branch change (-c = create ) 
+-git branch -d branchName			=> delete branch
+-git branch -M main, 
+-git config --global init.defaultBranch main 	=> master branch ကို main branch ပြောင်းတာ 
+-git config --global user.name "name"
+-git config --global user.email "email"
+
+-git remote add origin git@github.com:KyawBoLin/first-git-project.git => git account ထဲက project 
+ကိုညွှန်းတာ
+-git remote set-url origin git@github.com:<github-username>/<repository-name>.git  => Alternatively, removing a remote and adding a new remote can be accomplished in one step using the git 										remote set-url command
+-git remote -v, -git remote rm origin  => remove origin
+git push only push commit on the repository
+-git push -u origin main			=> code တွေ git ပေါ်တင်တာ "branch name" ပဲဖြစ်ရမယ်
+git push error when you overwrited the commit and push remote repository
+-git push -u origin main -f 			=> (-f = force push)
+
+-git remote -v				=> git ကိုဘာနဲ့ချိတ်ထားလဲ check တာ
+-ssh-keygen				=> press 3 times enter
+-cat .ssh/id-rsa.pub 			=> ssh key ရပြီ
+-git clone "name.git" 			=> clone ဆွဲတာ
+-git clone https://URL "folderName"		=>clone from remote with folder name
+-git pull origin "branch name",		
+-git pull origin master --set-upstream	=> online ကနေ offline ကို pull ဆွဲတာ
+-git branch -D dev 			=> dev branch ကိုဖျက်လိုက်တာ
+-git fetch origin, -git fetch			=> online နဲ့ offline ကိုတူအောင်လုပ်လိုက်တာ branch မရှိရင်တောင် online မှာရှိရင်ရတယ် "code review" လုပ်တဲ့အခါသုံးတယ် (check update is has or hasn't)
+-code . 					=> VS code open
+-git checkout -b "name"			=> branch ဖွင့်တယ် တန်းပါရောက်တယ် အဲ့ branch ကို
+-git log --oneline -n3			=> commit (၃) ကြောင်းပဲပြတယ်
+-git reset cc73c3				=> အဲ့လိုရေးလိုက်ရင် default အနေနဲ့ mixed ဖြစ်သွားတယ်
+-git reset	 --hard "3948292"			=> commit တွေပြန်ဖျက်တာ "3948292" ဒါက ကိုသွားချင်တဲ့ commit no အဲ့နောက်က commit တွေကို ဖျက်ပစ်လိုက်တာ
+-git reset --mixed cc73c3			=> commit တော့ဖျက်လိုက်တယ် but modify လုပ်ထားတဲ့ code တွေတော့ မပျက်သွားဘူး ပျက်သွားတဲ့ commit unstage ကိုပြန်ရောက်သွားတယ်
+-git reset --soft cc73c3			=> commit ကိုဖျက်လိုက်တယ် but modify လုပ်ထားတဲ့ code တွေတော့ မပျက်သွားဘူး နောက်ဆုံး commit cc73c3 staged ကိုပြန်ရောက်သွားတယ်
+-git restore --staged			=>  unstage လုပ်တာ git add လုပ်လို့ staged ရောက်သွားတာကို unstage(working tree) အခြေအနေရောက်အောင်ပြန်လုပ်တာ 
+-git restore <filename>			=> git add မလုပ်ရသေးတဲ့ အချိန် modify လုပ်ထားတာတွေကို discard လုပ်ပြီး နောက်ဆုံး commit အတိုင်းပြန်ဖြစ်အောင်လုပ်လိုက်တာ
+
+Git merge
+Notic: You must be a master or main before push to the Github.
+        :  If you must not be a master or main after push to the Github.
+-git merge branchName,
+-git merge branchName -m "Message"	=> This message will be the commit name after merge two branches
+
+fastForward Strategy
+- main branch ကနေ နောက် branch တစ်ခု ခွဲမယ် ပြီးရင်အဲ့ branch မှာ ဆက်ရေးမယ် ပြီးတော့မှ main branch နဲ့ ခွဲထားတဲ့ branch ကို merge မယ် အဲ့တာဆိုရင် branch ၂ခုလုံးညွှန်းတဲ့ နောက်ဆုံး commit ကတူသွားမယ်။
+
+recursiveThreeWay Strategy
+- main branch ကနေ နောက် branch တစ်ခု ခွဲမယ် ပြီးရင်အဲ့ branch မှာ ဆက်ရေးမယ် ပြီးရင် merge မလုပ်သေးပဲ main branch မှာ commit တစ်ခုထပ်ရေးမယ် ပြီးတော့မှ main branch နဲ့ ခွဲထားတဲ့ branch ကို merge မယ် အဲ့လိုဆိုရင် မတူတဲ့ branch 2 ခုကနေ commit 3 ခု ပေါင်းမယ် အဲ့လို merge ရင် commit တစ်ခု အသစ်ထွက်လာမယ် အဲ့ commit မှာ parent commit ၂ ခုရှိမယ်။
+
+Create Own alias for git command
+-git config --global alias.s "status"		=> create "git s" instead of "git status"
+-git config --global alias.cm "commit -m"	=> create "git cm" instead of "git commit -m"
+-git config --global alias.co "checkout"	=> create "git co" instead of "git checkout"
+
+Git Ignore
+-create ".gitignore" file and add file name what you want to ignore file in the git version history.(note: you need to "git add" and "git commit")
+
+Git Remove
+-rm -rf .git		=> remove all git version history from you project.
+
+Connect repository local to remote
+-git remote add origin "repository URL form Github" 
+URL is (http or SSH) if your repository used SSH you have to put SSH URL		=> connect command
+-git remote -v								=> which repository connect with git
+-git remote remove origin							=>  remove connection remote repository
+-git config --global credential.username "name"				=> want github to know who you are.
+-git push -u origin "branch name"						=> branch upload to remote repository.
+
+SSH key on window
+If you want to start ssh key on window you need to make running for OpenSSH Authentication Agent Properties form Window Services.(note: Startup type to Automatic)
+File တစ်ခုတည်းကို dev 2ယောက်ပေါင်းရေးရင် git မှာ ပေါင်းတဲ့ အခါ conflict ဖြစ်တတ်တယ်
+
+Feature Branch Workflow
+1. Create feature branch
+2. Upload to Github
+3. Create Pull Request
+4. Merge feature branch
