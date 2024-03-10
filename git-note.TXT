@@ -78,6 +78,23 @@ git push error when you overwrited the commit and push remote repository
 -git pull origin master --set-upstream	=> online ကနေ offline ကို pull ဆွဲတာ
 -git branch -D dev 			=> dev branch ကိုဖျက်လိုက်တာ
 -git fetch origin, -git fetch			=> online နဲ့ offline ကိုတူအောင်လုပ်လိုက်တာ branch မရှိရင်တောင် online မှာရှိရင်ရတယ် "code review" လုပ်တဲ့အခါသုံးတယ် (check update is has or hasn't)
+
+***************************************************************************************************************************************
+Fetch Changes from a Remote Repo
+When you do a git pull, behind the scenes git is doing git fetch (which downloads the latest changes from the remote repo) and then git merge (which merges them into your local codebase). If you don't want to merge the code immediately (you may want to review the changes first), you can do a git fetch instead of git pull.
+
+1. In your terminal (Terminal, Git Bash, or Windows Command Prompt), navigate to the folder for your Git repo.
+2. Run the following command:
+
+git fetch
+
+3. Now that you've downloaded the latest changes, you can compare your local branch to them. Assuming your on the master branch, you'd run the following command:
+
+git diff master origin/master
+
+NOTE: If you're working on a different branch, change master (in both places) to your branch name.
+***************************************************************************************************************************************
+
 -code . 					=> VS code open
 -git checkout -b "name"			=> branch ဖွင့်တယ် တန်းပါရောက်တယ် အဲ့ branch ကို
 -git log --oneline -n3			=> commit (၃) ကြောင်းပဲပြတယ်
