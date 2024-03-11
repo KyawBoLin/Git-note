@@ -91,7 +91,7 @@ git fetch
 3. Now that you've downloaded the latest changes, you can compare your local branch to them. Assuming your on the master branch, you'd run the following command:
 
 git diff master origin/master
-
+quit with 'q'
 NOTE: If you're working on a different branch, change master (in both places) to your branch name.
 ***************************************************************************************************************************************
 
